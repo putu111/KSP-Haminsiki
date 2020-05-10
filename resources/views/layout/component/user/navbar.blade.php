@@ -7,7 +7,7 @@
                 <form action="/sign-out" method="POST">
                     @csrf
 
-                    <button type="submit" class="btn-sign-out"><i class="fa fa-sign-out"></i>Sign Out</button>
+                    <button type="submit" class="btn-sign-out"><i class="fa fa-sign-out"></i>@lang("Dashboard.dashboard.signout")</button>
                 </form>
             </div>
         </nav>

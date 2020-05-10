@@ -1,7 +1,7 @@
 @extends('layout.user')
 
 @section('title')
-    Daftar Simpanan
+    @lang("Transaction.saving.list")
 @endsection
 
 @section('current-page')
@@ -11,17 +11,17 @@
 @section('content')
     <div class="table-wrapper">
         <div class="table-header">
-            <h4 class="table-header-text">Simpanan 10 Hari Terakhir</h4>
-            <button class="btn-create" id="show-modal" type="button">Tambah Simpanan</button>
+            <h4 class="table-header-text">@lang("Transaction.saving.list10")</h4>
+            <button class="btn-create" id="show-modal" type="button">@lang("Transaction.saving.add")</button>
         </div>
         <div class="table-body">
             <table class="table" id="table">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Tanggal</th>
-                        <th>Jumlah Penyetoran</th>
-                        <th>Jumlah Penarikan</th>
+                        <th>@lang("Transaction.saving.number")</th>
+                        <th>@lang("Transaction.saving.date")</th>
+                        <th>@lang("Transaction.saving.tstore")</th>
+                        <th>@lang("Transaction.saving.twithdraw")</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,15 +43,15 @@
         <div class="modal">
             <form action="/transaksi/simpanan/create" method="GET">    
                 <div class="modal-header">
-                    Pencarian Anggota
+                    @lang("Transaction.saving.fmem")
                 </div>
                 <div class="modal-body">
-                    <input type="number" name="no_anggota" class="input" placeholder="Masukkan No. Anggota" />
+                    <input type="number" name="no_anggota" class="input" placeholder="@lang("Transaction.saving.txtmemid")" />
                 </div>
                 <div class="modal-footer">
-                    <button class="btn-cancel" id="close-modal" type="button">Batal</button>
+                    <button class="btn-cancel" id="close-modal" type="button">@lang("Transaction.basic.cancel")</button>
                     <div class="footer-separator"></div>
-                    <button class="btn-create" type="submit">Cari</button>
+                    <button class="btn-create" type="submit">@lang("Transaction.basic.search")</button>
                 </div>
             </form>
         </div>

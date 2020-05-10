@@ -1,29 +1,40 @@
 <?php
 return[
     "saving" => [
-        "list"      => "Simpanan10HariTerakhir",
-        "add"       => "TambahSimpanan",
+        "list"      => "Daftar Simpanan",
+        "list10"    => "Simpanan 10 Hari Terakhir",
+        "add"       => "Tambah Simpanan",
+        "ftrans"    => "Formulir Transaksi",
         "number"    => "Nomor",
         "nik"       => "NIK",
         "date"      => "Tanggal",
-        "store"     => "JumlahPenyetoran" ,
-        "withdraw"  => "JumlahPenarikan",
+        "type"      => "Jenis Transaksi",
+        "store"     => "Penyetoran" ,
+        "withdraw"  => "Penarikan",
+        "tstore"    => "Jumlah Penyetoran" ,
+        "twithdraw" => "Jumlah Penarikan",
+        "amount"    => "Nominal",
+        "conf"      => "Konfirmasi Transaksi",
+        "fmem"      => "Pencarian Anggota",
 
-        "txtmemid"  => "MasukkanNomorAnggota",
-        "txtsearch" => "Pencarian Anggota"
+        "txtmemid"  => "Masukkan Nomor Anggota",
+        "txtconf"   => "Apaka hAnda Yakin Ingin Melakukan Transaksi Ini?",
     ],
     "process" => [
-        "list"      => "ProsesBungaSimpanan",
-        "listp"     => "DaftarProsesBungaSimpanan",
+        "list"      => "Proses Bunga Simpanan",
+        "listp"     => "Daftar Proses Bunga Simpanan",
         "month"     => "Bulan",
         "year"      => "Tahun",
-        "percent"   => "PersentaseBunga",
-        "date"      => "TanggalProses",
+        "percent"   => "Persentase Bunga",
+        "date"      => "Tanggal Proses",
         "user"      => "User" ,
     ],
     "basic" => [
         "cancel" => "Batal",
-        "search" => "Cari"
+        "search" => "Cari",
+        "back"   => "Kembali",
+        "send"   => "Kirim",
+        "sure"   => "Yakin"
     ]
     
 ]

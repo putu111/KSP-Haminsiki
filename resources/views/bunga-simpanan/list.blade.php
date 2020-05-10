@@ -1,7 +1,7 @@
 @extends('layout.user')
 
 @section('title')
-    Daftar Bunga Simpanan
+    @lang("MasterData.bunga.list")
 @endsection
 
 @section('current-page')
@@ -11,18 +11,18 @@
 @section('content')
     <div class="table-wrapper">
         <div class="table-header">
-            <h4 class="table-header-text">Daftar Bunga Simpanan</h4>
+            <h4 class="table-header-text">@lang("MasterData.bunga.list")</h4>
             <form action="/master/bunga-simpanan/create" method="GET">
-                <button type="submit" class="btn-create"><i class="fa fa-plus"></i>Tambah Bunga Simpanan</button>
+                <button type="submit" class="btn-create"><i class="fa fa-plus"></i>@lang("MasterData.bunga.add")</button>
             </form>
         </div>
         <table class="table" id="table">
             <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Persentase Bunga</th>
-                    <th>Tanggal Berlaku</th>
-                    <th>Action</th>
+                    <th>@lang("MasterData.bunga.number")</th>
+                    <th>@lang("MasterData.bunga.percent")</th>
+                    <th>@lang("MasterData.bunga.date")</th>
+                    <th>@lang("MasterData.bunga.action")</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,12 +46,12 @@
                                 <div class="menu">
                                     <ul>
                                         <form action="/master/bunga-simpanan/{{ $bungas[$i]->id }}/edit" method="GET">
-                                            <button class="btn-menu-list" type="submit">Edit</button>
+                                            <button class="btn-menu-list" type="submit">@lang("MasterData.basic.edit")</button>
                                         </form>
                                         <form action="/master/bunga-simpanan/{{ $bungas[$i]->id }}" method="POST">
                                             @csrf
                                             @method("DELETE")
-                                            <button class="btn-menu-list" type="submit">Delete</button>
+                                            <button class="btn-menu-list" type="submit">@lang("MasterData.basic.delete")</button>
                                         </form>
                                     </ul>
                                 </div>

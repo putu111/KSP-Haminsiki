@@ -66,4 +66,18 @@
             });
         });
     </script>
+
+    <script>
+        $('#sign-in').submit(function(e){
+            var username = $('#username').val();
+            var password = $('#password').val();
+
+            if(username && password){
+                return;
+            } else {
+                e.preventDefault();
+                alert("Not Submiting");
+            }
+        });
+    </script>
 @endsection

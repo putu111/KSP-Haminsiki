@@ -1,27 +1,27 @@
 @extends('layout.user')
 
 @section('title')
-    Report Bulanan
+    @lang("MasterData.report.repmonth")
 @endsection
 
 @section('current-page')
-    Report Bulanan
+    @lang("MasterData.report.repmonth")
 @endsection
 
 @section('content')
     <div class="table-wrapper">
         <div class="table-header">
-            <h4 class="table-header-text">Report Bulanan</h4>
-            <button class="btn-create" id="show-modal" type="button">Ganti Tanggal</button>
+            <h4 class="table-header-text">@lang("MasterData.report.repmonth")</h4>
+            <button class="btn-create" id="show-modal" type="button">@lang("MasterData.report.chadate")</button>
         </div>
         <div class="table-body">
             <table class="table" id="table">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Tanggal</th>
-                        <th>Debit</th>
-                        <th>Kredit</th>
+                        <th>@lang("MasterData.report.num")</th>
+                        <th>@lang("MasterData.report.date")</th>
+                        <th>@lang("MasterData.report.deb")</th>
+                        <th>@lang("MasterData.report.kre")</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,15 +48,15 @@
         <div class="modal">
             <form action="/report/bulanan" method="GET">    
                 <div class="modal-header">
-                    Ganti Tanggal
+                    @lang("MasterData.report.chadate")
                 </div>
                 <div class="modal-body">
-                    <input type="date" name="tanggal" class="input" placeholder="Masukkan Tanggal" />
+                    <input type="date" name="tanggal" class="input" placeholder="@lang("MasterData.report.txtdate")" />
                 </div>
                 <div class="modal-footer">
-                    <button class="btn-cancel" id="close-modal" type="button">Batal</button>
+                    <button class="btn-cancel" id="close-modal" type="button">@lang("MasterData.basic.cancel")</button>
                     <div class="footer-separator"></div>
-                    <button class="btn-create" type="submit">Cari</button>
+                    <button class="btn-create" type="submit">@lang("MasterData.basic.find")</button>
                 </div>
             </form>
         </div>

@@ -1,7 +1,7 @@
 @extends('layout.user')
 
 @section('title')
-    Daftar Anggota
+    @lang("MasterData.anggota.list")
 @endsection
 
 @section('current-page')
@@ -11,25 +11,25 @@
 @section('content')
     <div class="table-wrapper">
         <div class="table-header">
-            <h4 class="table-header-text">Daftar Anggota</h4>
+            <h4 class="table-header-text">@lang("MasterData.anggota.list")</h4>
             <form action="/master/anggota/create" method="GET">
-                <button type="submit" class="btn-create"><i class="fa fa-plus"></i>Tambah Anggota</button>
+                <button type="submit" class="btn-create"><i class="fa fa-plus"></i>@lang("MasterData.anggota.add")</button>
             </form>
         </div>
         <div class="table-body">
             <table class="table" id="table">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>No Anggota</th>
-                        <th>Nama</th>
-                        <th>Alamat</th>
-                        <th>Telepon</th>
-                        <th>No KTP</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Saldo</th>
-                        <th>Status Aktif</th>
-                        <th>Action</th>
+                        <th>@lang("MasterData.anggota.number")</th>
+                        <th>@lang("MasterData.anggota.memid")</th>
+                        <th>@lang("MasterData.anggota.name")</th>
+                        <th>@lang("MasterData.anggota.addres")</th>
+                        <th>@lang("MasterData.anggota.phone")</th>
+                        <th>@lang("MasterData.anggota.ktp")</th>
+                        <th>@lang("MasterData.anggota.gender")</th>
+                        <th>@lang("MasterData.anggota.saldo")</th>
+                        <th>@lang("MasterData.anggota.status")</th>
+                        <th>@lang("MasterData.anggota.action")</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,9 +41,9 @@
                             <td>{{ str_limit($anggota[$i]->alamat, 20) }}</td>
                             <td>{{ $anggota[$i]->telepon }}</td>
                             <td>{{ $anggota[$i]->noktp }}</td>
-                            <td>{{ $anggota[$i]->kelamin_id == 1 ? "Laki-laki" : "Perempuan" }}</td>
+                            <td>{{ $anggota[$i]->kelamin_id == 1 ? "@lang("MasterData.anggota.men")" : "@lang("MasterData.anggota.woman")" }}</td>
                             <td>{{ format_rupiah($anggota[$i]->saldo) }}</td>
-                            <td>{{ $anggota[$i]->status_aktif == 1 ? "Aktif" : "Nonaktif" }}</td>
+                            <td>{{ $anggota[$i]->status_aktif == 1 ? "@lang("MasterData.anggota.act")" : "@lang("MasterData.anggota.nact")" }}</td>
                             <td>
                                 @if ($anggota[$i]->status_aktif == 1)
                                     <button class="btn-more">
@@ -54,15 +54,15 @@
                                     <div class="menu">
                                         <ul>
                                             <form action="/master/anggota/{{ $anggota[$i]->id }}" method="GET">
-                                                <button class="btn-menu-list" type="submit">View</button>
+                                                <button class="btn-menu-list" type="submit">@lang("MasterData.basic.view")</button>
                                             </form>
                                             <form action="/master/anggota/{{ $anggota[$i]->id }}/edit" method="GET">
-                                                <button class="btn-menu-list" type="submit">Edit</button>
+                                                <button class="btn-menu-list" type="submit">@lang("MasterData.basic.edit")</button>
                                             </form>
                                             <form action="/master/anggota/{{ $anggota[$i]->id }}" method="POST">
                                                 @csrf
                                                 @method("DELETE")
-                                                <button class="btn-menu-list" type="submit">Delete</button>
+                                                <button class="btn-menu-list" type="submit">@lang("MasterData.basiic.delete")</button>
                                             </form>
                                         </ul>
                                     </div>

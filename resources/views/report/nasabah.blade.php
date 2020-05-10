@@ -1,18 +1,18 @@
 @extends('layout.user')
 
 @section('title')
-    Report Nasabah
+    @lang("MasterData.report.repday")
 @endsection
 
 @section('current-page')
-    Report Nasabah
+    @lang("MasterData.report.repday")
 @endsection
 
 @section('content')
     <div class="table-wrapper">
         <div class="table-header">
-            <h4 class="table-header-text">Report Nasabah</h4>
-            <button class="btn-create" id="show-modal" type="button">Cari Nasabah</button>
+            <h4 class="table-header-text">@lang("MasterData.report.repmem")</h4>
+            <button class="btn-create" id="show-modal" type="button">@lang("MasterData.report.findmem")</button>
         </div>
     </div>
 
@@ -23,15 +23,15 @@
                 @csrf
                 
                 <div class="modal-header">
-                    Cari Nasabah
+                    @lang("MasterData.report.findmem")
                 </div>
                 <div class="modal-body">
                     <input type="number" name="no_anggota" class="input" placeholder="Masukkan No. Anggota" />
                 </div>
                 <div class="modal-footer">
-                    <button class="btn-cancel" id="close-modal" type="button">Batal</button>
+                    <button class="btn-cancel" id="close-modal" type="button">@lang("MasterData.basic.cancel")</button>
                     <div class="footer-separator"></div>
-                    <button class="btn-create" type="submit">Cari</button>
+                    <button class="btn-create" type="submit">@lang("MasterData.basic.find")</button>
                 </div>
             </form>
         </div>

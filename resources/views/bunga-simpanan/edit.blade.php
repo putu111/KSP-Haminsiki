@@ -1,7 +1,7 @@
 @extends('layout.user')
 
 @section('title')
-    Edit Bunga Simpanan
+    @lang("MasterData.bunga.edit")
 @endsection
 
 @section('current-page')
@@ -11,7 +11,7 @@
 @section('content')
     <div class="form-wrapper">
         <div class="form-header">
-            <h3 class="form-header-text">Edit Bunga Simpanan</h3>
+            <h3 class="form-header-text">@lang("MasterData.bunga.edit")</h3>
         </div>
         <form action="/master/bunga-simpanan/{{ $bunga->id }}" method="POST" autocomplete="off" id="edit-bunga-simpanan" novalidate>
             @csrf
@@ -20,23 +20,23 @@
             <div class="form-body">
                 <div class="form-control">
                     <div class="form-label">
-                        <label for="persentase">Persentase Bunga </label>
+                        <label for="persentase">@lang("MasterData.bunga.precent")</label>
                     </div>
 
-                    <input type="number" id="persentase" class="input" name="persentase" placeholder="Masukkan Persentase Bunga (Tanpa %)" value="{{ $bunga->persentase }}" />
+                    <input type="number" id="persentase" class="input" name="persentase" placeholder="@lang("MasterData.bunga.txtpercent")" value="{{ $bunga->persentase }}" />
                 </div>
 
                 <div class="form-control">
                     <div class="form-label">
-                        <label for="tanggal-mulai-berlaku">Tanggal Mulai Berlaku</label>
+                        <label for="tanggal-mulai-berlaku">@lang("MasterData.bunga.sdate")</label>
                     </div>
 
-                    <input type="date" id="tanggal-mulai-berlaku" class="input" name="tanggal_mulai_berlaku" placeholder="Masukkan Tanggal Mulai Berlaku" value="{{ $bunga->tanggal_mulai_berlaku }}" />
+                    <input type="date" id="tanggal-mulai-berlaku" class="input" name="tanggal_mulai_berlaku" placeholder="@lang("MasterData.bunga.txtsdate")" value="{{ $bunga->tanggal_mulai_berlaku }}" />
                 </div>
             </div>
 
             <div class="form-footer">
-                <button type="submit" name="submit" class="button">Submit</button>
+                <button type="submit" name="submit" class="button">@lang("MasterData.basic.send")</button>
             </div>
         </form>
     </div>

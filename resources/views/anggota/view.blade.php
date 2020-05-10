@@ -25,9 +25,9 @@
                     <tr>
                         <td>{{ $i+1 }}</td>
                         <td>{{ $transaksi[$i]->tanggal }}</td>
-                        <td class="debit">{{ $transaksi[$i]->nominal_transaksi < 0 ? substr($transaksi[$i]->nominal_transaksi, 1) : "0" }}</td>
-                        <td class="kredit">{{ $transaksi[$i]->nominal_transaksi > 0 ? $transaksi[$i]->nominal_transaksi : "0" }}</td>
-                        <td class="saldo">{{ $new_saldo }}</td>
+                        <td>{{ $transaksi[$i]->nominal_transaksi < 0 ? format_rupiah(substr($transaksi[$i]->nominal_transaksi, 1)) : "-" }}</td>
+                        <td>{{ $transaksi[$i]->nominal_transaksi > 0 ? format_rupiah($transaksi[$i]->nominal_transaksi) : "-" }}</td>
+                        <td>{{ format_rupiah($new_saldo) }}</td>
                         <td>
                             @if ($transaksi[$i]->jenis_transaksi == 1)
                                 Penyetoran
@@ -54,12 +54,4 @@
             <button type="submit" class="btn-create"><i class="fa fa-undo"></i>Kembali</button>
         </form>
     </div>
-@endsection
-
-@section('script')
-    <script>
-        document.getElementsByClassName("debit").innerHTML = formatRupiah(document.getElementsByClassName("debit").innerHTML);
-        document.getElementsByClassName("kredit").innerHTML = formatRupiah(document.getElementsByClassName("kredit").innerHTML);
-        document.getElementsByClassName("saldo").innerHTML = formatRupiah(document.getElementsByClassName("saldo").innerHTML);
-    </script>
 @endsection

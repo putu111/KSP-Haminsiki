@@ -1,7 +1,7 @@
 @extends('layout.detail-anggota')
 
 @section('title')
-    Tambah Simpanan
+    @lang("Transaction.saving.add")
 @endsection
 
 @section('current-page')
@@ -13,48 +13,48 @@
         @csrf
         <div class="additional-wrapper">
             <div class="additional-header">
-                <div class="additional-header-text">Form Transaksi</div>
+                <div class="additional-header-text">@lang("Transaction.saving.ftrans")</div>
             </div>
             <div class="additional-body">
                 <input type="hidden" name="anggota_id" value="{{ $anggota->id }}">
                 <div class="additional-data">
-                    <span class="additional-data-label">Tanggal</span>
+                    <span class="additional-data-label">@lang("Transaction.saving.date")</span>
                     <div class="additional-data-input">{{date('Y-m-d')}}</div>
                 </div>
                 <div class="additional-data">
-                    <span class="additional-data-label">Jenis Transaksi</span>
+                    <span class="additional-data-label">@lang("Transaction.saving.type")</span>
                     <div class="additional-data-radio">
                         <input type="radio" name="jenis_transaksi" value="1" id="penyetoran" />
-                        <label for="penyetoran">Penyetoran</label>
+                        <label for="penyetoran">@lang("Transaction.saving.store")</label>
                         <input type="radio" name="jenis_transaksi" value="2" id="penarikan" />
-                        <label for="penarikan">Penarikan</label>
+                        <label for="penarikan">@lang("Transaction.saving.withdraw")</label>
                     </div>
                 </div>
                 <div class="additional-data">
-                    <span class="additional-data-label">Nominal</span>
+                    <span class="additional-data-label">@lang("Transaction.saving.amount")</span>
                     <input type="text" name="nominal_transaksi" class="additional-data-input" />
                 </div>
             </div>
         </div>
 
         <div class="detail-footer">
-            <a href="/transaksi/simpanan" class="btn-cancel"><i class="fa fa-undo"></i>Kembali</a>
-            <button type="button" id="show-modal" class="btn-create"><i class="fa fa-check"></i>Submit</button>
+            <a href="/transaksi/simpanan" class="btn-cancel"><i class="fa fa-undo"></i>@lang("Transaction.basic.back")</a>
+            <button type="button" id="show-modal" class="btn-create"><i class="fa fa-check"></i>@lang("Transaction.basic.send")</button>
         </div>
 
         <div class="modal-wrapper" id="modal">
             <div class="outlay"></div>
             <div class="modal"> 
                 <div class="modal-header">
-                    Konfirmasi Transaksi
+                    @lang("Transaction.saving.conf")
                 </div>
                 <div class="modal-body">
-                    <p class="modal-text">Apakah Anda yakin ingin melakukan transaksi ini?</p>
+                    <p class="modal-text">@lang("Transaction.saving.txtconf")</p>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn-cancel" id="close-modal" type="button">Batal</button>
+                    <button class="btn-cancel" id="close-modal" type="button">@lang("Transaction.basic.back")</button>
                     <div class="footer-separator"></div>
-                    <button class="btn-create" type="submit">Yakin</button>
+                    <button class="btn-create" type="submit">@lang("Transaction.basic.sure")</button>
                 </div>
             </div>
         </div>

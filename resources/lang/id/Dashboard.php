@@ -1,12 +1,13 @@
 <?php
 return[
     "dashboard" => [
-        "members"   => "TotalAnggota",
-        "simp"      => "SimpananBulanIni",
-        "persimp"   => "BungaSimpanan",
-        "perpinj"   => "BungaPinjaman",
-        "totsimp"   => "TotalSimpanan",
-        "totpinj"   => "TotalPinjaman"
+        "members"   => "Total Anggota",
+        "simp"      => "Simpanan Bulan Ini",
+        "persimp"   => "Bunga Simpanan",
+        "perpinj"   => "Bunga Pinjaman",
+        "totsimp"   => "Total Simpanan",
+        "totpinj"   => "Total Pinjaman",
+        "signout"   => "Keluar"
     ],
     "menu" => [
         "signout"   => "Keluar",
@@ -18,8 +19,8 @@ return[
         "report"    => "Laporan" ,
         "uname"     => "Username",
         "pwd"       => "KataSandi",
-        "txtuname"  => "MasukkanUsername",
-        "txtpwd"    => "MasukkanKataSandi",
+        "txtuname"  => "Masukkan Username",
+        "txtpwd"    => "Masukkan Kata Sandi",
         "nav"       => "Navigasi",
         "set"       => "Pengaturan",
         "lang"      => "Bahasa",

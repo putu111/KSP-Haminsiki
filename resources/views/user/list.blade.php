@@ -11,21 +11,21 @@
 @section('content')
     <div class="table-wrapper">
         <div class="table-header">
-            <h4 class="table-header-text">Daftar User</h4>
+            <h4 class="table-header-text">@lang('MasterData.user.list')</h4>
             <form action="/master/user/create" method="GET">
-                <button type="submit" class="btn-create"><i class="fa fa-plus"></i>Tambah User</button>
+                <button type="submit" class="btn-create"><i class="fa fa-plus"></i>@lang("MasterData.user.add")</button>
             </form>
         </div>
         <div class="table-body">
             <table class="table" id="table">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>NIK</th>
-                        <th>Nama</th>
-                        <th>Role</th>
-                        <th>Status Aktif</th>
-                        <th>Action</th>
+                        <th>@lang('MasterData.user.number')</th>
+                        <th>@lang('MasterData.user.nik')</th>
+                        <th>@lang('MasterData.user.name')</th>
+                        <th>@lang('MasterData.user.role')</th>
+                        <th>@lang('MasterData.user.status')</th>
+                        <th>@lang('MasterData.user.action')</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,15 +54,15 @@
                                     <div class="menu">
                                         <ul>
                                             <form action="/master/user/{{ $users[$i]->id }}" method="GET">
-                                                <button class="btn-menu-list" type="submit">View</button>
+                                                <button class="btn-menu-list" type="submit">@lang('MasterData.crud.view')</button>
                                             </form>
                                             <form action="/master/user/{{ $users[$i]->id }}/edit" method="GET">
-                                                <button class="btn-menu-list" type="submit">Edit</button>
+                                                <button class="btn-menu-list" type="submit">@lang('MasterData.crud.edit')</button>
                                             </form>
                                             <form action="/master/user/{{ $users[$i]->id }}" method="POST">
                                                 @csrf
                                                 @method("DELETE")
-                                                <button class="btn-menu-list" type="submit">Delete</button>
+                                                <button class="btn-menu-list" type="submit">@lang('MasterData.crud.delete')</button>
                                             </form>
                                         </ul>
                                     </div>

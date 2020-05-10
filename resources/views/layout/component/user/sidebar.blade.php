@@ -17,11 +17,11 @@
                     <h5 class="user-role">
                         <span>
                             @if ($user->user_role == 1)
-                                Pengelola Simpanan
+                                @lang('Dashboard.menu.admsimp')
                             @elseif ($user->user_role == 2)
-                                Pengelola Pinjaman
+                                @lang('Dashboard.menu.admpinj')
                             @elseif ($user->user_role == 3)
-                                Admin
+                                @lang('Dashboard.menu.adm')
                             @endif
                         </span>
                     </h5>
@@ -29,7 +29,7 @@
             </div>
             <div class="sidebar-nav">
                 <div class="nav-header">
-                    <h4 class="nav-header-text">Navigation</h4>
+                    <h4 class="nav-header-text">@lang("Dashboard.menu.nav")</h4>
                 </div>
                 <div class="nav-body">
                     <ul>
@@ -104,27 +104,47 @@
                         </li>
                     </ul>
                 </div>
+<<<<<<< Updated upstream
                                 <div class="nav-header">
+=======
+                <div class="nav-header">
+>>>>>>> Stashed changes
                     <h4 class="nav-header-text">@lang("Dashboard.menu.set")</h4>
                 </div>
                 <div class="nav-body">
                     <ul>
+<<<<<<< Updated upstream
                             <li class="nav-list-item dropdown {{ Request::is('master/*') ? 'active' : '' }}">
+=======
+                            <li class="nav-list-item dropdown {{ Request::is('/*') ? 'active' : '' }}">
+>>>>>>> Stashed changes
                                 <i class="fa fa-tasks"></i>@lang("Dashboard.menu.lang")
                                 <i class="fa fa-angle-left right"></i>
                                 <ul class="dropdown-item">
                                     <li>
+<<<<<<< Updated upstream
                                         <a href="{{ url('locale/id') }}" class="dropdown-list-item">
+=======
+                                        <a href="{{ url('locale/id') }}" class="dropdown-list-item {{ Request::is('/*') ? 'active' : ''}}" >
+>>>>>>> Stashed changes
                                             <i class="fa fa-user-secret"></i>Indonesia - ID
                                         </a>
                                     </li>
                                     <li>
+<<<<<<< Updated upstream
                                         <a href="{{ url('locale/en') }}" class="dropdown-list-item">
+=======
+                                        <a href="{{ url('locale/en') }}" class="dropdown-list-item {{ Request::is('/*') ? 'active' : ''}}">
+>>>>>>> Stashed changes
                                             <i class="fa fa-users"></i>English - EN
                                         </a>
                                     </li>
                                     <li>
+<<<<<<< Updated upstream
                                         <a href="{{ url('locale/gr') }}" class="dropdown-list-item {{ Request::is('master/bunga-simpanan', 'master/bunga-simpanan/*') ? 'active' : '' }}">
+=======
+                                        <a href="{{ url('locale/gr') }}" class="dropdown-list-item {{ Request::is('/*') ? 'active' : '' }}">
+>>>>>>> Stashed changes
                                             <i class="fa fa-percent"></i>German - GR
                                         </a>
                                     </li>

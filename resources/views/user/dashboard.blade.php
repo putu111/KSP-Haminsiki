@@ -52,6 +52,34 @@
                 </div>
             </div>
         </div>
+        <div class="counter-grid">
+            <div class="counter bg-blue">
+                <div class="counter-header">
+                    <div class="space"></div>
+                    <h4 class="header-icon"><i class="fa fa-percent"></i></h4>
+                </div>
+                <div class="counter-body">
+                    <h3 class="counter-value">1024</h3>
+                </div>
+                <div class="counter-footer">
+                    <h4 class="counter-info">Bunga Pinjaman</h4>
+                </div>
+            </div>
+        </div>
+        <div class="counter-grid">
+            <div class="counter bg-green">
+                <div class="counter-header">
+                    <div class="space"></div>
+                    <h4 class="header-icon"><i class="fa fa-handshake-o"></i></h4>
+                </div>
+                <div class="counter-body">
+                    <h3 class="counter-value">1024</h3>
+                </div>
+                <div class="counter-footer">
+                    <h4 class="counter-info">Total Pinjaman</h4>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="chart-wrapper">
         <canvas id="simpanan"></canvas>

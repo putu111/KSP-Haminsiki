@@ -1,7 +1,7 @@
 @extends('layout.user')
 
 @section('title')
-    Tambah Bunga Simpanan
+    @lang("MasterData.bunga.add")
 @endsection
 
 @section('current-page')
@@ -11,7 +11,7 @@
 @section('content')
     <div class="form-wrapper">
         <div class="form-header">
-            <h3 class="form-header-text">Tambah Bunga Simpanan</h3>
+            <h3 class="form-header-text">@lang("MasterData.bunga.add")</h3>
         </div>
         <form action="/master/bunga-simpanan" method="POST" autocomplete="off" id="tambah-bunga-simpanan" novalidate>
             @csrf
@@ -19,23 +19,23 @@
             <div class="form-body">
                 <div class="form-control">
                     <div class="form-label">
-                        <label for="persentase">Persentase Bunga</label>
+                        <label for="persentase">@lang("MasterData.bunga.percent")</label>
                     </div>
 
-                    <input type="number" id="persentase" class="input" name="persentase" placeholder="Masukkan Persentase Bunga (Tanpa %)" />
+                    <input type="number" id="persentase" class="input" name="persentase" placeholder="@lang("MasterData.bunga.txtpercent")" />
                 </div>
 
                 <div class="form-control">
                     <div class="form-label">
-                        <label for="tanggal-mulai-berlaku">Tanggal Mulai Berlaku</label>
+                        <label for="tanggal-mulai-berlaku">@lang("MasterData.bunga.sdate")</label>
                     </div>
 
-                    <input type="date" id="tanggal-mulai-berlaku" class="input" name="tanggal_mulai_berlaku" placeholder="Masukkan Tanggal Mulai Berlaku" />
+                    <input type="date" id="tanggal-mulai-berlaku" class="input" name="tanggal_mulai_berlaku" placeholder="@lang("MasterData.bunga.txtsdate")" />
                 </div>
             </div>
 
             <div class="form-footer">
-                <button type="submit" name="submit" class="button">Submit</button>
+                <button type="submit" name="submit" class="button">@lang("MasterData.basic.send")</button>
             </div>
         </form>
     </div>

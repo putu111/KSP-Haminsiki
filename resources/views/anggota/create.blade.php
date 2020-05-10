@@ -1,7 +1,7 @@
 @extends('layout.user')
 
 @section('title')
-    Tambah Anggota
+    @lang("MasterData.anggota.aad")
 @endsection
 
 @section('current-page')
@@ -11,7 +11,7 @@
 @section('content')
     <div class="form-wrapper">
         <div class="form-header">
-            <h3 class="form-header-text">Tambah Anggota</h3>
+            <h3 class="form-header-text">@lang("MasterData.anggota.add")</h3>
         </div>
         <form action="/master/anggota" method="POST" autocomplete="off" id="tambah-anggota">
             @csrf
@@ -19,51 +19,51 @@
             <div class="form-body">
                 <div class="form-control">
                     <div class="form-label">
-                        <label for="nama">Nama</label>
+                        <label for="nama">@lang("MasterData.anggota.name")</label>
                     </div>
 
-                    <input type="text" id="nama" class="input" name="nama" placeholder="Masukkan Nama Anggota" />
+                    <input type="text" id="nama" class="input" name="nama" placeholder="@lang("MasterData.anggota.txtname2")" />
                 </div>
 
                 <div class="form-control">
                     <div class="form-label">
-                        <label for="alamat">Alamat</label>
+                        <label for="alamat">@lang("MasterData.anggota.addres")</label>
                     </div>
 
-                    <textarea id="alamat" class="textarea" name="alamat" placeholder="Masukkan Alamat Anggota" rows="3"></textarea>
+                    <textarea id="alamat" class="textarea" name="alamat" placeholder="@lang("MasterData.anggota.txtadrs")" rows="3"></textarea>
                 </div>
 
                 <div class="form-control">
                     <div class="form-label">
-                        <label for="telepon">No. Telepon</label>
+                        <label for="telepon">@lang("MasterData.anggota.phone")</label>
                     </div>
 
-                    <input type="text" id="telepon" class="input" name="telepon" placeholder="Masukkan No. Telepon Anggota" />
+                    <input type="text" id="telepon" class="input" name="telepon" placeholder="@lang("MasterData.anggota.txtphone")" />
                 </div>
 
                 <div class="form-control">
                     <div class="form-label">
-                        <label for="noktp">No. KTP</label>
+                        <label for="noktp">@lang("MasterData.anggota.ktp")</label>
                     </div>
 
-                    <input type="text" id="noktp" class="input" name="noktp" placeholder="Masukkan No. KTP Anggota" />
+                    <input type="text" id="noktp" class="input" name="noktp" placeholder="@lang("MasterData.anggota.txtktp")" />
                 </div>
 
                 <div class="form-control">
                     <div class="form-label">
-                        <label>Jenis Kelamin</label>
+                        <label>@lang("MasterData.anggota.gender")</label>
                     </div>
 
                     <select id="jenis-kelamin" name="kelamin_id" class="input">
                         <option value="">None</option>
-                        <option value="1">Laki-laki</option>
-                        <option value="2">Perempuan</option>
+                        <option value="1">@lang("MasterData.anggota.men")</option>
+                        <option value="2">@lang("MasterData.anggota.woman")</option>
                     </select>
                 </div>
             </div>
 
             <div class="form-footer">
-                <button type="submit" name="submit" class="button">Submit</button>
+                <button type="submit" name="submit" class="button">@lang("MasterData.basic.send")</button>
             </div>
         </form>
     </div>
