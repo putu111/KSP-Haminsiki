@@ -104,6 +104,34 @@
                         </li>
                     </ul>
                 </div>
+                                <div class="nav-header">
+                    <h4 class="nav-header-text">@lang("Dashboard.menu.set")</h4>
+                </div>
+                <div class="nav-body">
+                    <ul>
+                            <li class="nav-list-item dropdown {{ Request::is('master/*') ? 'active' : '' }}">
+                                <i class="fa fa-tasks"></i>@lang("Dashboard.menu.lang")
+                                <i class="fa fa-angle-left right"></i>
+                                <ul class="dropdown-item">
+                                    <li>
+                                        <a href="{{ url('locale/id') }}" class="dropdown-list-item">
+                                            <i class="fa fa-user-secret"></i>Indonesia - ID
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('locale/en') }}" class="dropdown-list-item">
+                                            <i class="fa fa-users"></i>English - EN
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('locale/gr') }}" class="dropdown-list-item {{ Request::is('master/bunga-simpanan', 'master/bunga-simpanan/*') ? 'active' : '' }}">
+                                            <i class="fa fa-percent"></i>German - GR
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </aside>
